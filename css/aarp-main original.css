@@ -1,0 +1,437 @@
+/* AARP main styles */
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: #c2c2c2;
+	padding: 0;
+	font-size: 100%;
+}
+
+#wrapper {
+	position: relative;
+	width: 1024px;
+	height: 748px;
+	/*
+	background: #fff url(../sysimages/main_back.png) top center no-repeat;
+	*/
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+#topbar {
+	position: absolute;
+	width: 1024px;
+	height: 46px;
+	background: url(../sysimages/top_bar.png) 1px 0 no-repeat;
+}
+a#info {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 46px;
+	height: 46px;
+	background: url(../sysimages/info_0.png) 0 0 no-repeat;
+}
+a#info:hover, a#info:focus {
+	background: url(../sysimages/info_1.png) 0 0 no-repeat;
+}
+
+#container {
+	position: absolute;
+	left: -341px;
+	top: 46px;
+	width: 1365px;
+	height: 702px;
+	overflow: hidden;
+	background: #57f;
+}
+
+/*** Station A: Tech Place ***/
+a#A-tech-place {
+	position: absolute;
+	top: 550px;
+	left: 370px;
+	width: 48px;
+	height: 62px;
+	background: url(../sysimages/point_a_reg.png) top center no-repeat;
+}
+a#A-tech-place:hover, a#A-tech-place:focus {
+	background: url(../sysimages/point_a_click.png) top center no-repeat;
+}
+a#A-tech-place.visited {
+	background: url(../sysimages/point_a_visit_reg.png) top center no-repeat;
+}
+#A-sm-env {
+	position: absolute;
+	top: 550px;
+	left: 412px;
+	width: 42px;
+	height: 42px;
+	background: url(../sysimages/mail_visit_reg.png) top center no-repeat;
+	display: none;
+}
+#A-sm-env:hover, #A-sm-env:focus {
+	background: url(../sysimages/mail_visit_click.png) top center no-repeat;
+}
+
+/*** Station B: DC State Office ***/
+a#B-dc-office {
+	position: absolute;
+	top: 550px;
+	left: 104px;
+	width: 48px;
+	height: 62px;
+	background: url(../sysimages/point_b_reg.png) top center no-repeat;
+}
+a#B-dc-office:hover, a#B-dc-office:focus {
+	background: url(../sysimages/point_b_click.png) top center no-repeat;
+}
+a#B-dc-office.visited {
+	background: url(../sysimages/point_b_visit_reg.png) top center no-repeat;
+}
+#B-sm-env {
+	position: absolute;
+	top: 550px;
+	left: 146px;
+	width: 42px;
+	height: 42px;
+	background: url(../sysimages/mail_visit_reg.png) top center no-repeat;
+	display: none;
+}
+#B-sm-env:hover, #B-sm-env:focus {
+	background: url(../sysimages/mail_visit_click.png) top center no-repeat;
+}
+
+/*** Station C: Library ***/
+a#C-library {
+	position: absolute;
+	top: 210px;
+	left: 298px;
+	width: 48px;
+	height: 62px;
+	background: url(../sysimages/point_c_reg.png) top center no-repeat;
+}
+a#C-library:hover, a#C-library:focus {
+	background: url(../sysimages/point_c_click.png) top center no-repeat;
+}
+a#C-library.visited {
+	background: url(../sysimages/point_c_visit_reg.png) top center no-repeat;
+}
+#C-sm-env {
+	position: absolute;
+	top: 210px;
+	left: 256px;
+	width: 42px;
+	height: 42px;
+	background: url(../sysimages/mail_visit_reg.png) top center no-repeat;
+	display: none;
+}
+#C-sm-env:hover, #C-sm-env:focus {
+	background: url(../sysimages/mail_visit_click.png) top center no-repeat;
+}
+
+/*** Station D: studios ***/
+a#D-studios {
+	position: absolute;
+	top: 437px;
+	left: 787px;
+	width: 48px;
+	height: 62px;
+	background: url(../sysimages/point_d_reg.png) top center no-repeat;
+}
+a#D-studios:hover, a#D-studios:focus {
+	background: url(../sysimages/point_d_click.png) top center no-repeat;
+}
+a#D-studios.visited {
+	background: url(../sysimages/point_d_visit_reg.png) top center no-repeat;
+}
+#D-sm-env {
+	position: absolute;
+	top: 437px;
+	left: 829px;
+	width: 42px;
+	height: 42px;
+	background: url(../sysimages/mail_visit_reg.png) top center no-repeat;
+	display: none;
+}
+#D-sm-env:hover, #D-sm-env:focus {
+	background: url(../sysimages/mail_visit_click.png) top center no-repeat;
+}
+
+/*** Station E: B Lobby (Ethics & Compliance) ***/
+a#E-lobby {
+	position: absolute;
+	top: 550px;
+	left: 875px;
+	width: 48px;
+	height: 62px;
+	background: url(../sysimages/point_e_reg.png) top center no-repeat;
+}
+a#E-lobby:hover, a#E-lobby:focus {
+	background: url(../sysimages/point_e_click.png) top center no-repeat;
+}
+a#E-lobby.visited {
+	background: url(../sysimages/point_e_visit_reg.png) top center no-repeat;
+}
+#E-sm-env {
+	position: absolute;
+	top: 550px;
+	left: 837px;
+	width: 42px;
+	height: 42px;
+	background: url(../sysimages/mail_visit_reg.png) top center no-repeat;
+	display: none;
+}
+#E-sm-env:hover, #E-sm-env:focus {
+	background: url(../sysimages/mail_visit_click.png) top center no-repeat;
+}
+
+
+
+/***** info-panel *****/
+#info-panel {
+	position: absolute;
+	top: 0;
+	left: 0px;
+	width: 341px;
+	height: 702px;
+	background: url(../sysimages/panel.png) top center no-repeat;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	font-weight: normal;
+	line-height: 24px;
+	color: #fff;
+	overflow: hidden;
+	z-index: 9;
+}
+#info-panel .title {
+	position: absolute;
+	font-weight: bold;
+	left: 70px;
+	width: 260px;
+	height: auto;
+}
+#info-panel hr {
+	position: absolute;
+	width: 100%;
+	border: none;
+	border-top: 1px solid #6d6e71;
+	height: 1px;
+}
+
+#info-panel #circle1 {
+	position: absolute;
+	top: 90px;
+	left: 16px;
+	width: 34px;
+	height: 34px;
+	background: url(../sysimages/panel_1.png) top center no-repeat;
+}
+#info-panel #txt1 {
+	top: 97px;
+}
+#hr1 {
+	top: 121px;
+}
+
+#info-panel #circle2 {
+	position: absolute;
+	top: 159px;
+	left: 16px;
+	width: 34px;
+	height: 34px;
+	background: url(../sysimages/panel_2.png) top center no-repeat;
+}
+#info-panel #txt2 {
+	position: absolute;
+	top: 166px;
+	left: 70px;
+	width: 270px;
+	height: auto;
+}
+#info-panel ol {
+	list-style-type: upper-alpha;
+	font-weight: normal;
+	padding-left: 25px;
+	box-sizing: border-box;
+}
+#info-panel ol li {
+	margin-bottom: 14px;
+}
+#hr2 {
+	top: 290px;
+}
+
+#info-panel #circle3 {
+	position: absolute;
+	top: 330px;
+	left: 16px;
+	width: 34px;
+	height: 34px;
+	background: url(../sysimages/panel_3.png) top center no-repeat;
+}
+#info-panel #txt3 {
+	top: 337px;
+}
+
+a#close-panel {
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	width: 16px;
+	height: 16px;
+	background: url(../sysimages/panel_close_reg.png) 0 0 no-repeat;
+}
+a#close-panel:hover, a#close-panel:focus {
+	background: url(../sysimages/panel_close_click.png) 0 0 no-repeat;
+}
+
+
+#content {
+	position: absolute;
+	top: 0;
+	left: 341px;
+	width: 1024px;
+	height: 702px;
+	background: url(../sysimages/background.jpg) left top no-repeat;
+	overflow: hidden;
+}
+
+/*** Dialog trigger ***/
+.dlg-trigger {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 172px;
+	height: 128px;
+	display: none;
+	z-index: 9;
+}
+
+a#A-lg-env {
+	background: url(../sysimages/envelpe_it_reg.png) 0 0 no-repeat;
+}
+a#A-lg-env:hover, a#A-lg-env:focus {
+	background: url(../sysimages/envelpe_it_click.png);
+}
+
+a#B-lg-env {
+	background: url(../sysimages/envelpe_csn_reg.png) 0 0 no-repeat;
+}
+a#B-lg-env:hover, a#B-lg-env:focus {
+	background: url(../sysimages/envelpe_csn_click.png);
+}
+
+a#C-lg-env {
+	background: url(../sysimages/envelpe_pri_reg.png) 0 0 no-repeat;
+}
+a#C-lg-env:hover, a#C-lg-env:focus {
+	background: url(../sysimages/envelpe_pri_click.png);
+}
+
+a#D-lg-env {
+	background: url(../sysimages/envelpe_icm_reg.png) 0 0 no-repeat;
+}
+a#D-lg-env:hover, a#D-lg-env:focus {
+	background: url(../sysimages/envelpe_icm_click.png);
+}
+
+a#E-lg-env {
+	background: url(../sysimages/envelpe_ethics_reg.png) 0 0 no-repeat;
+}
+a#E-lg-env:hover, a#E-lg-env:focus {
+	background: url(../sysimages/envelpe_ethics_click.png);
+}
+
+
+/*** dialog itself: custom-counter list ***/
+.custom-counter {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.custom-counter li {
+  counter-increment: step-counter;
+  margin-bottom: 10px;
+}
+.custom-counter li::before {
+  content: counter(step-counter)".";
+  margin-right: 15px;
+  font-weight: bold;
+}
+
+button.action {
+	background: #C70A0A;
+	color: #fff;
+	padding: 5px 10px;
+}
+
+/***** Tech Place *****/
+#tech-place {
+	position: absolute;
+	left: 100px;
+	top: 500px;
+	width: 100px;
+	height: 20px;
+	padding: 0;
+	text-align: center;
+}
+
+/***** overide bootstrap modal styles *****/
+.modal {
+	width: 100%;
+	position: fixed;
+	text-align: center;
+	margin: 0px auto;
+	top: 0px;
+	left: 0px;
+	bottom: 0px;
+	right: 0px;
+	z-index: 1050;
+}
+.modal_wrapper {
+	display: table;
+	overflow: auto;
+	overflow-y: scroll;
+	height: 100%;
+	-webkit-overflow-scrolling: touch;
+	outline: 0;
+	text-align: center;
+	margin: 0px auto;
+}
+.modal-dialog {
+	margin-top: 0px;
+	display: table-cell;
+	vertical-align: middle;
+	margin: 0px 20px;
+}
+
+.modal-header {
+	min-height:18px;
+	padding:7px;
+	font-size: 16px;
+	border-bottom:1px solid #e5e5e5;
+}
+.modal-header .close {
+	margin-top:-3px;
+}
+.modal-header .place {
+	font-weight: bold;
+	margin-right: 5px;
+}
+.modal-body {
+	padding: 5px 0;
+}
+
+.modal-backdrop {
+	background-color: #000;
+	opacity: 0.8 !important;
+}
+
+.dialog__content {
+	background: url(../sysimages/textures/lightpaperfibers_@2X.png) top left no-repeat;
+	overflow: hidden;
+}

@@ -1,0 +1,159 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-compatible" content="IE=Edge,chrome=1" >
+<meta name="HandheldFriendly" content="True">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+
+<!--<link rel="apple-touch-icon" size="57x57" href="icons/apple-icon-57x57.png">
+<link rel="apple-touch-icon" size="60x60" href="icons/apple-icon-60x60.png">
+<link rel="apple-touch-icon" size="72x72" href="icons/apple-icon-72x72.png">
+<link rel="apple-touch-icon" size="76x76" href="icons/apple-icon-76x76.png">
+<link rel="apple-touch-icon" size="114x114" href="icons/apple-icon-114x114.png">
+<link rel="apple-touch-icon" size="120x120" href="icons/apple-icon-120x120.png">
+<link rel="apple-touch-icon" size="144x144" href="icons/apple-icon-144x144.png">
+<link rel="apple-touch-icon" size="152x152" href="icons/apple-icon-152x152.png">
+<link rel="apple-touch-icon" size="180x180" href="icons/apple-icon-180x180.png">-->
+<link rel="icon" type="image/png" size="192x192" href="icons/android-icon-192x192.png">
+<link rel="icon" type="image/png" size="16x16" href="icons/favicon-16x16.png">
+<link rel="icon" type="image/png" size="32x32" href="icons/favicon-32x32.png">
+<link rel="icon" type="image/png" size="96x96" href="icons/favicon-96x96.png">
+<link rel="manifest" href="icons/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="icons/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<link href="icons/icon.png" rel="apple-touch-icon" /> 
+<link rel="shortcut icon" href="icons/favicon.ico" type="image/x-icon">
+<link rel="icon" href="icons/favicon.ico" type="image/x-icon">
+
+<title>AARP</title>
+
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="css/animate.css" />
+<link rel="stylesheet" type="text/css" href="css/aarp-main.css" />
+<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+<link rel="stylesheet" type="text/css" href="css/dialog.css" />
+
+<script type="text/javascript" src="js/modernizr.custom.js"></script>
+
+</head>
+
+<body>
+<div id="wrapper">
+
+<div id="topbar">
+  <!-- more info trigger -->
+  <a id="info" href="#" onClick="toggleInfoPanel();" onKeyPress="toggleInfoPanel();" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="info-panel" title="toggle information panel"></a>
+
+</div>
+
+<div id="container">
+
+<aside id="info-panel" aria-hidden="true">
+<!-- Info panel -->
+  <a id="close-panel" href="#" tabindex="-1" onClick="toggleInfoPanel();" onKeyPress="toggleInfoPanel();" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="info-panel" title="close information panel"></a>
+  
+  <div id="circle1"></div>
+  <div id="txt1" class="title">Find your way to each station.</div>
+  <hr id="hr1" />
+  
+  <div id="circle2"></div>
+  <div id="txt2" class="title">
+    <p>At each station:</p>
+    <ol>
+      <li>Tap the applicable letter on the map to learn more.</li> 
+      <li>Complete the activity</li>
+    </ol>
+  </div>
+  <hr id="hr2" />
+
+  <div id="circle3"></div>
+  <div id="txt3" class="title">When you return to the classroom, share your activity results with the instructor to complete the race.</div>
+  
+</aside><!-- end of #info-panel -->
+
+<div id="content">
+
+  <a id="tech-place" href="#vModal" role="button" data-toggle="modal"></a>
+  
+  <a id="A-envelope" href="#"></a>
+  
+  <a id="dc-office" href="#"></a>
+  
+  <a id="library" href="#"></a>
+  
+  <a id="D-TBD" href="#"></a>
+  
+  <a id="E-TBD" href="#"></a>
+  
+  <!-- text dialog - dialog effect -->                  
+  <div id="txtDialog" class="dialog" aria-hidden="true">
+      <div class="dialog__overlay"></div>
+      <div class="dialog__content">
+        <header>
+          <a id="close-dialog" href="#" tabindex="-1" class="close-dialog" role="button" data-dialog-close> </a>
+
+          <img id="dialog-header-img" src="sysimages/activty_it.png" alt="Amazing Race Activity Information Technology" >
+          
+          <h2>Now that you know a little bit about IT and the services they provide, complete this activity:</h2>
+        </header>
+          
+          <ol class="custom-counter">
+            <li>Use your iPad to access the IT page on InfoNet.</li>
+            <li>Look up the daily WiFi password</li> 
+            <li>Write the password down in your Notes application.</li>
+            <li>Be prepared to show this information to your instructor when <span style="padding-left:28px;">you return to the classroom.</span></li>
+          </ol>
+          
+      </div>
+  </div><!-- end of text dialog -->
+  
+  <!-- video dialog - bootstrap -->
+  <div id="vModal" class="modal fade" tabindex="-1">
+    <div class="modal_wrapper">
+    <div class="modal-dialog">
+	  <div class="modal-content">
+      
+	    <div class="modal-header"><span class="place">Tech Place:</span><span class="prompt">Select the play button below to start.</span>
+        <button class="close" type="button" data-dismiss="modal">&times;</button>
+		  <!--<h4 class="modal-title">Video Modal</h4>-->
+	    </div>
+        
+	    <div class="modal-body">
+		  <div style="width: 960px; " class="wp-video">
+		    <video class="wp-video-shortcode" id="video1" width="900" height="675" preload="metadata" controls>		
+              <source type="video/mp4" src="videos/AARP_IT_AR.mp4"/>
+          	  <track id="cctrack" kind="captions" src="videos/AARP_IT_AR.vtt" srclang="en-us" label="Closed Captions" />
+              <a href="videos/AARP_IT_AR.mp4">Download the video</a>
+            </video>
+		  </div>
+	    </div>
+        <!--
+          poster="videos/aarp.png"
+        -->
+	  </div><!-- end of .modal-content -->
+    </div><!-- end of .modal-dialog -->
+    </div><!-- end of .modal_wrapper -->
+  </div><!-- end of video dialog -->
+
+
+</div><!-- end of #content -->
+
+</div><!-- end of #container -->
+                    
+<!-- modal box trigger -->
+<a id="dialog" href="#" tabindex="-1" class="button-wrap" role="button" data-dialog="txtDialog" class="trigger" title="show dialog"></a>
+
+</div><!-- end of #wrapper -->
+
+<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/classie.js"></script>
+<script src="js/dialogFx.js"></script>
+<script src="js/aarp-content.js"></script>
+ 
+</body>
+</html>

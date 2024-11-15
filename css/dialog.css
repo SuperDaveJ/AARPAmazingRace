@@ -1,0 +1,122 @@
+.dialog,
+.dialog__overlay {
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+
+.dialog {
+	position: fixed;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-align-items: center;
+	align-items: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	pointer-events: none;
+	z-index: 100;
+}
+
+.dialog__overlay {
+	position: absolute;
+	z-index: 1;
+	background: rgba(55, 58, 71, 0.9);
+	opacity: 0;
+	-webkit-transition: opacity 0.3s;
+	transition: opacity 0.3s;
+	-webkit-backface-visibility: hidden;
+}
+
+.dialog--open .dialog__overlay {
+	opacity: 1;
+	pointer-events: auto;
+}
+
+.dialog__content {
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	line-height: 24px;
+	width: 55%;
+	max-width: 560px;
+	min-width: 290px;
+	background: #fff;
+	padding: 43px;
+	position: relative;
+	z-index: 5;
+	opacity: 0;
+}
+
+.dialog--open .dialog__content {
+	pointer-events: auto;
+}
+
+/* Content */
+a.close-dialog {
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	width: 16px;
+	height: 16px;
+	background: url(../sysimages/modal_close_reg.png) 0 0 no-repeat;
+}
+a.close-dialog:hover, a.close-dialog:focus {
+	background: url(../sysimages/modal_close_click.png) 0 0 no-repeat;
+}
+
+img#dialog-header-img {
+	margin-left: -15px;
+}
+.dialog h2 {
+	font-size: 16px;
+	line-height: 24px;
+	font-weight: 700;
+	margin: 32px 16px 24px 32px;
+	text-align: center;
+}
+
+/***** Sally specific *****/
+.dialog__overlay {
+	-webkit-transition-duration: 0.4s;
+	transition-duration: 0.4s;
+}
+
+.dialog.dialog--open .dialog__content,
+.dialog.dialog--close .dialog__content {
+	-webkit-animation-duration: 0.4s;
+	animation-duration: 0.4s;
+	-webkit-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+}
+
+.dialog.dialog--open .dialog__content {
+	-webkit-animation-name: anim-open;
+	animation-name: anim-open;
+	-webkit-animation-timing-function: cubic-bezier(0.6,0,0.4,1);
+	animation-timing-function: cubic-bezier(0.6,0,0.4,1);
+}
+
+.dialog.dialog--close .dialog__content {
+	-webkit-animation-name: anim-close;
+	animation-name: anim-close;
+}
+
+@-webkit-keyframes anim-open {
+	0% { opacity: 0; -webkit-transform: scale3d(0, 0, 1); }
+	100% { opacity: 1; -webkit-transform: scale3d(1, 1, 1); }
+}
+
+@keyframes anim-open {
+	0% { opacity: 0; -webkit-transform: scale3d(0, 0, 1); transform: scale3d(0, 0, 1); }
+	100% { opacity: 1; -webkit-transform: scale3d(1, 1, 1); transform: scale3d(1, 1, 1); }
+}
+
+@-webkit-keyframes anim-close {
+	0% { opacity: 1; }
+	100% { opacity: 0; -webkit-transform: scale3d(0.5, 0.5, 1); }
+}
+
+@keyframes anim-close {
+	0% { opacity: 1; }
+	100% { opacity: 0; -webkit-transform: scale3d(0.5, 0.5, 1); transform: scale3d(0.5, 0.5, 1); }
+}

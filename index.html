@@ -1,0 +1,361 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-compatible" content="IE=Edge,chrome=1" >
+<meta name="HandheldFriendly" content="True">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+
+<!--<link rel="apple-touch-icon" size="57x57" href="icons/apple-icon-57x57.png">
+<link rel="apple-touch-icon" size="60x60" href="icons/apple-icon-60x60.png">
+<link rel="apple-touch-icon" size="72x72" href="icons/apple-icon-72x72.png">
+<link rel="apple-touch-icon" size="76x76" href="icons/apple-icon-76x76.png">
+<link rel="apple-touch-icon" size="114x114" href="icons/apple-icon-114x114.png">
+<link rel="apple-touch-icon" size="120x120" href="icons/apple-icon-120x120.png">
+<link rel="apple-touch-icon" size="144x144" href="icons/apple-icon-144x144.png">
+<link rel="apple-touch-icon" size="152x152" href="icons/apple-icon-152x152.png">
+<link rel="apple-touch-icon" size="180x180" href="icons/apple-icon-180x180.png">-->
+<link rel="icon" type="image/png" size="192x192" href="icons/android-icon-192x192.png">
+<link rel="icon" type="image/png" size="16x16" href="icons/favicon-16x16.png">
+<link rel="icon" type="image/png" size="32x32" href="icons/favicon-32x32.png">
+<link rel="icon" type="image/png" size="96x96" href="icons/favicon-96x96.png">
+<link rel="manifest" href="icons/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="icons/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<link href="icons/icon.png" rel="apple-touch-icon" /> 
+<link rel="shortcut icon" href="icons/favicon.ico" type="image/x-icon">
+<link rel="icon" href="icons/favicon.ico" type="image/x-icon">
+
+<title>AARP</title>
+
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="css/animate.css" />
+<link rel="stylesheet" type="text/css" href="css/aarp-main.css" />
+<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+<link rel="stylesheet" type="text/css" href="css/dialog.css" />
+
+<script type="text/javascript" src="js/modernizr.custom.js"></script>
+
+</head>
+
+<body>
+<div id="wrapper">
+
+<div id="topbar">
+  <!-- more info trigger -->
+  <a id="info" href="#" onClick="toggleInfoPanel();" onKeyPress="toggleInfoPanel();" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="info-panel" title="toggle information panel"></a>
+
+</div>
+
+<div id="container">
+
+<aside id="info-panel" aria-hidden="true">
+<!-- Info panel -->
+  <a id="close-panel" href="#" tabindex="-1" onClick="toggleInfoPanel();" onKeyPress="toggleInfoPanel();" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="info-panel" title="close information panel"></a>
+  
+  <div id="circle1"></div>
+  <div id="txt1" class="title">Find your way to each station.</div>
+  <hr id="hr1" />
+  
+  <div id="circle2"></div>
+  <div id="txt2" class="title">
+    <p>At each station:</p>
+    <ol>
+      <li>Tap the applicable letter on the map to learn more.</li> 
+      <li>Complete the activity</li>
+    </ol>
+  </div>
+  <hr id="hr2" />
+
+  <div id="circle3"></div>
+  <div id="txt3" class="title">When you return to the classroom, share your activity results with the instructor to complete the race.</div>
+  
+</aside><!-- end of #info-panel -->
+
+<div id="content">
+
+  <!-- Station A: Tech Place (IT) -->
+  <a id="A-tech-place" href="#aVideo" role="button" data-toggle="modal" title="Station A: Tech Place (IT)"></a>
+  <a id="A-sm-env" href="#" role="button" data-toggle="modal"></a>
+  
+  <!-- Station B: DC State Office (CSN) -->
+  <a id="B-dc-office" href="#bVideo" role="button" data-toggle="modal" title="Station B: DC State Office (CSN)"></a>
+  <a id="B-sm-env" href="#" role="button" data-toggle="modal"></a>
+  
+  
+  <!-- Station C: Library (PRI) -->
+  <a id="C-library" href="#cVideo" role="button" data-toggle="modal" title="Station C: Library (PRI)"></a>
+  <a id="C-sm-env" href="#" role="button" data-toggle="modal"></a>
+  
+  <!-- Station D: Studios (ICM) -->
+  <a id="D-studios" href="#dVideo" role="button" data-toggle="modal" title="Station D: Studios (ICM)"></a>
+  <a id="D-sm-env" href="#" role="button" data-toggle="modal"></a>
+  
+  <!-- Station E: B Lobby (Ethics & Compliance) -->
+  <a id="E-lobby" href="#eVideo" role="button" data-toggle="modal" title="Station E: B Lobby (Ethics & Compliance)"></a>
+  <a id="E-sm-env" href="#" role="button" data-toggle="modal"></a>
+ 
+  <!-- Station A: text dialog -->                  
+  <div id="A-dialogBox" class="dialog" aria-hidden="true">
+      <div class="dialog__overlay"></div>
+      <div class="dialog__content">
+        <header>
+          <a id="A-close-dialog" href="#" tabindex="-1" class="close-dialog" role="button" data-dialog-close> </a>
+
+          <img id="dialog-header-img" src="sysimages/activty_it.png" alt="Amazing Race Activity: Information Technology" >
+          
+          <h2>Now that you know a little bit about IT and the services they provide, complete this activity:</h2>
+        </header>
+          
+          <ol class="custom-counter">
+            <p>Use your iPad to access the IT page on InfoNet. Look up the daily WiFi password. Write the password down in the Notes application on your iPad.</p>
+          </ol>
+          
+      </div>
+  </div><!-- end of text dialog -->
+  
+  <!-- Station B: text dialog -->                  
+  <div id="B-dialogBox" class="dialog" aria-hidden="true">
+      <div class="dialog__overlay"></div>
+      <div class="dialog__content">
+        <header>
+          <a id="B-close-dialog" href="#" tabindex="-1" class="close-dialog" role="button" data-dialog-close> </a>
+
+          <img id="dialog-header-img" src="sysimages/activty_csn.png" alt="Amazing Race Activity: Community State and National Affairs" >
+          
+          <h2>Now that you know a little bit about CSN and the services they provide, complete this activity:</h2>
+        </header>
+          
+          <ol class="custom-counter">
+            <p>Take a group “selfie” in front of the office door of the State Office.</p>
+          </ol>
+          
+      </div>
+  </div><!-- end of text dialog -->
+
+ 
+  <!-- Station C: text dialog -->                  
+  <div id="C-dialogBox" class="dialog" aria-hidden="true">
+      <div class="dialog__overlay"></div>
+      <div class="dialog__content">
+        <header>
+          <a id="C-close-dialog" href="#" tabindex="-1" class="close-dialog" role="button" data-dialog-close> </a>
+
+          <img id="dialog-header-img" src="sysimages/activty_pri.png" alt="Amazing Race Activity: Policy, Research & International Affairs" >
+          
+          <h2>Now that you know a little bit about PRI and the services they provide, complete this activity:</h2>
+        </header>
+          
+          <ol class="custom-counter">
+            <p>Imagine someone asks you, “What is AARP’s position on privatizing the Social Security program?”  How would you answer that? Would you know where to find AARP’s position on a specific issue like that?</p>
+            <p>This is a great example of how The Policy Book can help you! </p> 
+            <p>Access the online version of The Policy Book at policybook.aarp.org and note the name of the chapter where you could read more about AARP’s positions on income in retirement - specifically, the Social Security program.  Be sure to document your findings in the Notes application on your iPad.</p>
+          </ol>
+          
+      </div>
+  </div><!-- end of text dialog -->
+
+ 
+  <!-- Station D: text dialog -->                  
+  <div id="D-dialogBox" class="dialog" aria-hidden="true">
+      <div class="dialog__overlay"></div>
+      <div class="dialog__content">
+        <header>
+          <a id="D-close-dialog" href="#" tabindex="-1" class="close-dialog" role="button" data-dialog-close> </a>
+
+          <img id="dialog-header-img" src="sysimages/activty_icm.png" alt="Amazing Race Activity: Integrated Communications and Marketing" >
+          
+          <h2>Now that you know a little bit about ICM and the services they provide, complete this activity:</h2>
+        </header>
+          
+          <ol class="custom-counter">
+            <p>All AARP employees are granted lifetime membership to AARP! Start taking advantage of your membership benefits today. Use this link to have one of your team members <a href="https://secure.aarp.org/everywhere/secure/registration.html?intcmp=DSO-HDR-REG-EWHERE&referrer=http%3A%2F%2Fsearch.aarp.org%2Fgss%2Feverywhere" target="_blank">register on the AARP.org website</a>. Be sure to take a screen shot of the confirmation page so your facilitator can see it when you return to the classroom.</p>
+            <p><b>Tip:</b> To take a screen shot, press and hold the Sleep/Wake button on the top of the iPad and immediately press and release the Home button. </p>
+          </ol>
+          
+      </div>
+  </div><!-- end of text dialog -->
+  
+ 
+  <!-- Station E: text dialog -->                  
+  <div id="E-dialogBox" class="dialog" aria-hidden="true">
+      <div class="dialog__overlay"></div>
+      <div class="dialog__content">
+        <header>
+          <a id="E-close-dialog" href="#" tabindex="-1" class="close-dialog" role="button" data-dialog-close> </a>
+
+          <img id="dialog-header-img" src="sysimages/activty_ethics.png" alt="Amazing Race Activity: Ethics & Compliance" >
+          
+          <h2>Now that you know a little more about our Code of Conduct and what is expected of you, please complete this activity:</h2>
+        </header>
+          
+          <ol class="custom-counter">
+            <p>Recall the three ways that you can Raise YRVoice. Write these down in the Notes application on your iPad.</p>
+          </ol>
+          
+      </div>
+  </div><!-- end of text dialog -->
+
+
+  
+  <!-- Station A: video dialog - bootstrap -->
+  <div id="aVideo" class="modal fade" tabindex="-1">
+    <div class="modal_wrapper">
+    <div class="modal-dialog">
+	  <div class="modal-content">
+      
+	    <div class="modal-header"><span class="place">Tech Place (IT):</span><span class="prompt">Select the play button below to start.</span>
+        <button class="close" type="button" data-dismiss="modal">&times;</button>
+		  <!--<h4 class="modal-title">Video Modal</h4>-->
+	    </div>
+        
+	    <div class="modal-body">
+		  <div style="width: 960px; " class="wp-video">
+		    <video class="wp-video-shortcode" id="video1" width="900" height="675" preload="metadata" controls>		
+              <source type="video/mp4" src="videos/it.mp4"/>
+          	  <track id="cctrack" kind="captions" src="videos/AARP_IT_AR.vtt" srclang="en-us" label="Closed Captions" />
+              <a href="videos/it.mp4">Download the video</a>
+            </video>
+		  </div>
+	    </div>
+        <!--
+          poster="videos/aarp.png"
+        -->
+	  </div><!-- end of .modal-content -->
+    </div><!-- end of .modal-dialog -->
+    </div><!-- end of .modal_wrapper -->
+  </div><!-- end of video dialog -->
+  
+  <!-- Station B: video dialog - bootstrap -->
+  <div id="bVideo" class="modal fade" tabindex="-1">
+    <div class="modal_wrapper">
+    <div class="modal-dialog">
+	  <div class="modal-content">
+      
+	    <div class="modal-header"><span class="place">DC State Office (CSN):</span><span class="prompt">Select the play button below to start.</span>
+        <button class="close" type="button" data-dismiss="modal">&times;</button>
+		  <!--<h4 class="modal-title">Video Modal</h4>-->
+	    </div>
+        
+	    <div class="modal-body">
+		  <div style="width: 960px; " class="wp-video">
+		    <video class="wp-video-shortcode" id="video2" width="900" height="675" preload="metadata" controls>		
+              <source type="video/mp4" src="videos/csn.mp4"/>
+          	  <!--<track id="cctrack" kind="captions" src="videos/AARP_CSN.vtt" srclang="en-us" label="Closed Captions" />-->
+              <a href="videos/csn.mp4">Download the video</a>
+            </video>
+		  </div>
+	    </div>
+	  </div><!-- end of .modal-content -->
+    </div><!-- end of .modal-dialog -->
+    </div><!-- end of .modal_wrapper -->
+  </div><!-- end of video dialog -->
+  
+  <!-- Station C: video dialog - bootstrap -->
+  <div id="cVideo" class="modal fade" tabindex="-1">
+    <div class="modal_wrapper">
+    <div class="modal-dialog">
+	  <div class="modal-content">
+      
+	    <div class="modal-header"><span class="place">Library (PRI):</span><span class="prompt">Select the play button below to start.</span>
+        <button class="close" type="button" data-dismiss="modal">&times;</button>
+		  <!--<h4 class="modal-title">Video Modal</h4>-->
+	    </div>
+        
+	    <div class="modal-body">
+		  <div style="width: 960px; " class="wp-video">
+		    <video class="wp-video-shortcode" id="video3" width="900" height="675" preload="metadata" controls>		
+              <source type="video/mp4" src="videos/pri.mp4"/>
+          	  <!--<track id="cctrack" kind="captions" src="videos/AARP_CSN.vtt" srclang="en-us" label="Closed Captions" />-->
+              <a href="videos/pri.mp4">Download the video</a>
+            </video>
+		  </div>
+	    </div>
+	  </div><!-- end of .modal-content -->
+    </div><!-- end of .modal-dialog -->
+    </div><!-- end of .modal_wrapper -->
+  </div><!-- end of video dialog -->
+  
+  <!-- Station D: video dialog - bootstrap -->
+  <div id="dVideo" class="modal fade" tabindex="-1">
+    <div class="modal_wrapper">
+    <div class="modal-dialog">
+	  <div class="modal-content">
+      
+	    <div class="modal-header"><span class="place">Studios (ICM):</span><span class="prompt">Select the play button below to start.</span>
+        <button class="close" type="button" data-dismiss="modal">&times;</button>
+		  <!--<h4 class="modal-title">Video Modal</h4>-->
+	    </div>
+        
+	    <div class="modal-body">
+		  <div style="width: 960px; " class="wp-video">
+		    <video class="wp-video-shortcode" id="video4" width="900" height="675" preload="metadata" controls>		
+              <source type="video/mp4" src="videos/icm.mp4"/>
+          	  <!--<track id="cctrack" kind="captions" src="videos/AARP_CSN.vtt" srclang="en-us" label="Closed Captions" />-->
+              <a href="videos/icm.mp4">Download the video</a>
+            </video>
+		  </div>
+	    </div>
+	  </div><!-- end of .modal-content -->
+    </div><!-- end of .modal-dialog -->
+    </div><!-- end of .modal_wrapper -->
+  </div><!-- end of video dialog -->
+  
+  <!-- Station E: video dialog - bootstrap -->
+  <div id="eVideo" class="modal fade" tabindex="-1">
+    <div class="modal_wrapper">
+    <div class="modal-dialog">
+	  <div class="modal-content">
+      
+	    <div class="modal-header"><span class="place">B Lobby (Ethics & Compliance):</span><span class="prompt">Select the play button below to start.</span>
+        <button class="close" type="button" data-dismiss="modal">&times;</button>
+		  <!--<h4 class="modal-title">Video Modal</h4>-->
+	    </div>
+        
+	    <div class="modal-body">
+		  <div style="width: 960px; " class="wp-video">
+		    <video class="wp-video-shortcode" id="video5" width="900" height="675" preload="metadata" controls>		
+              <source type="video/mp4" src="videos/ethics.mp4"/>
+          	  <!--<track id="cctrack" kind="captions" src="videos/AARP_CSN.vtt" srclang="en-us" label="Closed Captions" />-->
+              <a href="videos/ethics.mp4">Download the video</a>
+            </video>
+		  </div>
+	    </div>
+	  </div><!-- end of .modal-content -->
+    </div><!-- end of .modal-dialog -->
+    </div><!-- end of .modal_wrapper -->
+  </div><!-- end of video dialog -->
+
+
+</div><!-- end of #content -->
+
+</div><!-- end of #container -->
+                    
+<!-- Station A: modal box trigger -->
+<a id="A-lg-env" href="#" tabindex="-1" class="dlg-trigger button-wrap" role="button" data-dialog="A-dialogBox" title="show dialog"></a>
+                    
+<!-- Station B: modal box trigger -->
+<a id="B-lg-env" href="#" tabindex="-1" class="dlg-trigger button-wrap" role="button" data-dialog="B-dialogBox" title="show dialog"></a>
+                    
+<!-- Station C: modal box trigger -->
+<a id="C-lg-env" href="#" tabindex="-1" class="dlg-trigger button-wrap" role="button" data-dialog="C-dialogBox" title="show dialog"></a>
+                    
+<!-- Station D: modal box trigger -->
+<a id="D-lg-env" href="#" tabindex="-1" class="dlg-trigger button-wrap" role="button" data-dialog="D-dialogBox" title="show dialog"></a>
+                    
+<!-- Station E: modal box trigger -->
+<a id="E-lg-env" href="#" tabindex="-1" class="dlg-trigger button-wrap" role="button" data-dialog="E-dialogBox" title="show dialog"></a>
+
+</div><!-- end of #wrapper -->
+
+<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/classie.js"></script>
+<script src="js/dialogFx.js"></script>
+<script src="js/aarp-content.js"></script>
+ 
+</body>
+</html>
